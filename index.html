@@ -20,9 +20,8 @@
         </div>
 
         <div class="top-bar__buttons">
-            <button>
-                <a>Login</a>
-            </button>
+            <input type="checkbox" id="sign-up-button">
+            <label for="sign-up-button" class="sign-up" style="margin-right: 20px;">Login</label>
             <input type="checkbox" id="sign-up-button">
             <label for="sign-up-button" class="sign-up">Sign up</label>
 
@@ -33,14 +32,16 @@
                 </header>
 
                     <h1>Sign Up and start playing!</h1>
+                    <form action="">
                     <label class="form-label">Name</label>
-                    <input type="text" placeholder="">
+                    <input type="text" placeholder="" required oninvalid="this.setCustomValidity('Mandatory field')" oninput="this.setCustomValidity('Mandatory Field')">
                     <label class="form-label">Email address</label>
-                    <input type="text" placeholder="">
+                    <input type="email" placeholder="" required oninvalid="this.setCustomValidity('Mandatory field')" oninput="this.setCustomValidity('Mandatory Field')" > 
                     <label class="form-label">Password</label>
-                    <input type="password" placeholder="">
+                    <input type="password" placeholder="" required oninvalid="this.setCustomValidity('Mandatory field')" oninput="this.setCustomValidity('Mandatory Field')">
                     <p>By clicking the Sign Up button you confirm you are +18</p>
-                    <button class="modal-button">Sign Up</button>
+                    <input type="submit" value="Sign Up" class="modal-button">
+                    </form>
                 </div>
 
             </section>
